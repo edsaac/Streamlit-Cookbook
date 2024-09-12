@@ -114,7 +114,7 @@ class ShoppingCart(UserDict):
         for name, qty in zip(names, qtys):
             st.markdown(f":gray[- {name} (× {qty:.0f})]")
 
-    @st.experimental_dialog("🛒 Shopping cart", width="large")
+    @st.dialog("🛒 Shopping cart", width="large")
     def show(self):
         """Dialog to show the shopping cart and options to pay"""
 
@@ -133,7 +133,7 @@ class ShoppingCart(UserDict):
             },
         )
 
-        empty_cart_column, pay_column = st.columns([1,3])
+        empty_cart_column, pay_column = st.columns([1, 3])
 
         with empty_cart_column:
             if st.button(
@@ -145,7 +145,6 @@ class ShoppingCart(UserDict):
                 st.rerun()
 
         with pay_column:
-
             pay_button = st.button(
                 f"Pay total: ${self.total:.2f}",
                 disabled=not self,

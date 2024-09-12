@@ -28,7 +28,7 @@ def main():
         st.html(css)
 
     with st.echo(code_location="below"):
-        st.image("https://placekitten.com/200/300", caption="A cat 🐈‍⬛")
+        st.image("./photo/a_mountain.jpg", caption="A mountain 🏞️")
 
 
 if __name__ == "__main__":

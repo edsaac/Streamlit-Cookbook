@@ -2,8 +2,7 @@ import streamlit as st
 
 
 def main():
-
-    font_family = "Impact"
+    font_family = "Allura"
 
     css = f"""
         <style>        
@@ -17,10 +16,9 @@ def main():
     if st.toggle("Inject CSS"):
         st.html(css)
 
-
     with st.echo(code_location="below"):
         st.title("The quick brown fox jumps over the lazy dog.")
-        st.write("👻 some other text " * 10)
+        st.write("👻 Some other text.")
 
 
 if __name__ == "__main__":

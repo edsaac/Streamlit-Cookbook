@@ -3,7 +3,7 @@ import streamlit as st
 st.set_page_config(layout="wide")
 
 
-@st.experimental_dialog("Dialog")
+@st.dialog("Dialog")
 def show_dialog():
     st.image(
         "https://placehold.co/300x200?text=I'm+in+the+dialog+box",
@@ -11,6 +11,9 @@ def show_dialog():
         use_column_width=True,
     )
 
+
+if st.button("Show dialog"):
+    show_dialog()
 
 with st.sidebar:
     st.header("Sidebar")
